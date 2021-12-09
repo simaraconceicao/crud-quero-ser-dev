@@ -15,4 +15,4 @@ const candidatasRouter = require('./src/routes/candidatas.routes')
 app.use('/candidatas', candidatasRouter)
 
 
-app.listen(3333, ()=> console.log('Server listening on port 3333'))
+app.listen(PORT, console.log(`Server is starting at ${PORT}`))
