@@ -16,10 +16,11 @@ app.use(express.json())
 //usar a rota
 const vagasRouter = require('./src/routes/vagas.routes')
 const candidatasRouter = require('./src/routes/candidatas.routes')
-
-if (process.env.NODE_ENV === 'production') {
   app.use('/vagas', vagasRouter)
   app.use('/candidatas', candidatasRouter)
+
+if (process.env.NODE_ENV === 'production') {
+  app.use('/', express.static({name: 'quero-ser-dev-api'}))
 }
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`))
