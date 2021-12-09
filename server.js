@@ -18,7 +18,6 @@ const vagasRouter = require('./src/routes/vagas.routes')
 const candidatasRouter = require('./src/routes/candidatas.routes')
 
 if (process.env.NODE_ENV === 'production') {
-  app.use('/')
   app.use('/vagas', vagasRouter)
   app.use('/candidatas', candidatasRouter)
 }
