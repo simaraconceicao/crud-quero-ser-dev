@@ -21,5 +21,6 @@ const vagasRouter = require('./src/routes/vagas.routes')
 const candidatasRouter = require('./src/routes/candidatas.routes')
 app.use('/vagas', vagasRouter)
 app.use('/candidatas', candidatasRouter)
+app.use('/', express.static('README.md'))
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`))
